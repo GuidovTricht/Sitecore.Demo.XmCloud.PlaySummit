@@ -7,6 +7,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PlatformVersion>1.*</PlatformVersion>
+    <HeadlessServicesVersion>21.0.*</HeadlessServicesVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Update="Sitecore.XmCloud.Kernel" Version="$(PlatformVersion)" />
@@ -16,7 +17,12 @@
     <PackageReference Update="Sitecore.XmCloud.Assemblies" Version="$(PlatformVersion)" />
     <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="19.*" />
     <!-- DEMO TEAM CUSTOMIZATION - Add JSS, GraphQL, and Content Hub references -->
-    <PackageReference Update="Sitecore.JavaScriptServices.ViewEngine" Version="20.0.0" />
+    <PackageReference Update="Sitecore.JavaScriptServices.ViewEngine" Version="$(HeadlessServicesVersion)" />
+    <PackageReference Update="Sitecore.AspNet.ExperienceEditor" Version="$(HeadlessServicesVersion)" />
+    <PackageReference Update="Sitecore.AspNet.RenderingEngine" Version="$(HeadlessServicesVersion)" />
+    <PackageReference Update="Sitecore.AspNet.Tracking" Version="$(HeadlessServicesVersion)" />
+    <PackageReference Update="Sitecore.AspNet.Tracking.VisitorIdentification" Version="$(HeadlessServicesVersion)" />
+    <PackageReference Update="Sitecore.LayoutService.Client" Version="$(HeadlessServicesVersion)" />
     <PackageReference Update="Sitecore.Services.GraphQL" Version="6.1.0" />
     <PackageReference Update="Sitecore.Services.GraphQL.EdgeSchema" Version="6.0.0" />
     <PackageReference Update="Sitecore.Connector.CMP" Version="5.*" />
